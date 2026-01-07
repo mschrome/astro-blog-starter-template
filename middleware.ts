@@ -7,7 +7,3 @@ export function middleware(context) {
       }
   });
 }
-
-export const config = {
-  matcher: '/:path*',
-};
