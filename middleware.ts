@@ -1,5 +1,13 @@
 export function middleware(context) {
-  // 直接返回响应
-  return new Response('Hello World');
-
+  // 修改请求 header
+  return context.next({
+      headers: {
+          'x-custom-header': 'middleware-added',
+          'x-request-id': Math.random(),
+      }
+  });
 }
+
+export const config = {
+  matcher: '/:path*',
+};
