@@ -9,5 +9,5 @@ export function middleware(context) {
 }
 
 export const config = {
-  matcher: '/hello',
+  matcher: '/:path*',
 };
